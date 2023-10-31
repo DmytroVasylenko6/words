@@ -44,13 +44,6 @@ export const authApi = createApi({
         method: 'POST',
         body: data,
       }),
-      async onQueryStarted(arg, { dispatch, getState, queryFulfilled }) {
-        console.log('onQueryStarted arg:', arg);
-      },
-      // The 2nd parameter is the destructured `MutationCacheLifecycleApi`
-      async onCacheEntryAdded(arg, { dispatch, getState, extra, requestId }) {
-        console.log('onCacheEntryAdded arg:', arg);
-      },
     }),
     current: builder.mutation<{ user: UserResponse }, void>({
       query: () => ({

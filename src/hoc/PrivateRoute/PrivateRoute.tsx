@@ -10,7 +10,7 @@ interface IProp {
 }
 const PrivateRoute = ({ children }: IProp) => {
   const auth = useAuth();
-  console.log('PrivateRoute  auth:', auth);
+
   return auth ? (
     <Suspense fallback={<>Loading...</>}>
       <ErrorBoundary>{children}</ErrorBoundary>

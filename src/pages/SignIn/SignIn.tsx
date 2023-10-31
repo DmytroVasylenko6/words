@@ -37,7 +37,7 @@ const SignIn = () => {
   return (
     <>
       <h1>Sign In</h1>
-      {/* <If condition={isSignInLoading || isCurrentLoading}>Loading...</If> */}
+      <If condition={isSignInLoading || isCurrentLoading}>Loading...</If>
       <Form
         {...layout}
         form={form}
@@ -52,7 +52,7 @@ const SignIn = () => {
           <Input type="password" />
         </Form.Item>
         <Form.Item {...tailLayout}>
-          <Button type="primary" htmlType="submit" loading={isSignInLoading}>
+          <Button type="primary" htmlType="submit">
             Submit
           </Button>
         </Form.Item>
