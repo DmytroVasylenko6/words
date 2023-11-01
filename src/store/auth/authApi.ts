@@ -20,7 +20,7 @@ export interface UserResponse {
 export const authApi = createApi({
   reducerPath: 'authApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:3040/api/users',
+    baseUrl: 'https://words-api-chi.vercel.app/api/users',
     prepareHeaders: (headers, { getState }) => {
       // By default, if we have a token in the store, let's use that for authenticated requests
       const token = (getState() as RootState).auth.token;
